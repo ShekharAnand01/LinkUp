@@ -1,5 +1,6 @@
 package com.example.linkup
 
+import android.content.Intent
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
@@ -15,13 +16,13 @@ import androidx.navigation.ui.setupWithNavController
 import com.example.linkup.databinding.ActivityMainBinding
 import com.example.linkup.fragments.ChatFragment
 import com.example.linkup.fragments.ProfileFragment
-import com.example.linkup.fragments.SearchUserFragment
+import com.example.linkup.fragments.SearchUserActivity
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private val chatFragment = ChatFragment()
     private val profileFragment = ProfileFragment()
-    private val searchUserFragment = SearchUserFragment()
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,10 +37,8 @@ class MainActivity : AppCompatActivity() {
 
 
         binding.mainSearchBtn.setOnClickListener {
-            supportFragmentManager.beginTransaction()
-                .replace(R.id.main_frame_layout, searchUserFragment)
-                .addToBackStack(null)
-                .commit()
+            val intent = Intent(this, SearchUserActivity::class.java)
+            startActivity(intent)
         }
 
         binding.bottomNavigation.setOnItemSelectedListener { item ->

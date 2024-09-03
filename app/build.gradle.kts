@@ -51,10 +51,13 @@ dependencies {
     implementation(libs.firebase.storage)
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui.ktx)
+    implementation(libs.common)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
     implementation (libs.ccp.v250)
+    implementation (libs.firebaseui.firebase.ui.firestore)
+    implementation (libs.glide)
 
 }
