@@ -33,22 +33,22 @@ class FirebaseUtil {
         fun getChatroomMessageReference(chatroomId: String): CollectionReference =
             getChatroomReference(chatroomId).collection("chats")
 
-//        fun getChatroomId(userId1: String, userId2: String): String {
-//            return if (userId1.hashCode() < userId2.hashCode()) {
-//                "$userId1_$userId2"
-//            } else {
-//                "$userId2_$userId1"
-//            }
-//        }
+        fun getChatroomId(userId1: String, userId2: String): String {
+            return if (userId1.hashCode() < userId2.hashCode()) {
+                "$userId1+_+$userId2"
+            } else {
+                "$userId2+_+$userId1"
+            }
+        }
 
         fun allChatroomCollectionReference(): CollectionReference =
             firestore.collection("chatrooms")
 
-        fun getOtherUserFromChatroom(userIds: List<String>): DocumentReference {
+        fun getOtherUserFromChatroom(userIds: List<String?>): DocumentReference {
             return if (userIds[0] == currentUserId()) {
-                allUserCollectionReference().document(userIds[1])
+                allUserCollectionReference().document(userIds[1]?:"")
             } else {
-                allUserCollectionReference().document(userIds[0])
+                allUserCollectionReference().document(userIds[0]?:"")
             }
         }
 

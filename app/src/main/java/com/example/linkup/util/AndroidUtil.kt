@@ -7,6 +7,7 @@ import android.widget.ImageView
 import android.widget.Toast
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
+import com.example.linkup.databinding.ProfilePicViewBinding
 import com.example.linkup.model.UserModel
 
 
