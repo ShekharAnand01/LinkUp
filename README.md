@@ -21,7 +21,7 @@ LinkUp is a real-time messaging application built using **Kotlin** and **Firebas
 
 ## Screenshots
 
-<div align="center" style="display: flex; justify-content: center; gap: 30px;">
+
   <figure>
     <img src="https://github.com/user-attachments/assets/7beab65a-74a4-4bdc-b95d-972175a9e926" alt="LoginNumber Screen" width="300" height="600">
   </figure>
@@ -41,7 +41,7 @@ LinkUp is a real-time messaging application built using **Kotlin** and **Firebas
     <img src="https://github.com/user-attachments/assets/a58671d6-774f-426f-bda2-3d9dfd37dec0" alt="Profile Screen" width="300" height="600">
   </figure>
 
-</div>
+
 
 
 ## Installation
